@@ -15,6 +15,7 @@ $understrap_inc_dir = get_template_directory() . '/inc';
 $understrap_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/setup.php',                           // Theme setup and custom theme supports.
+	'/include.php',                         // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
 	'/enqueue.php',                         // Enqueue scripts and styles.
 	'/template-tags.php',                   // Custom template tags for this theme.
@@ -42,3 +43,5 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once $understrap_inc_dir . $file;
 }
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');

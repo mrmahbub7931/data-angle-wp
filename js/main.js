@@ -39,6 +39,8 @@
             });
         }
     });
+
+    $('.navbar-nav a').removeClass('nav-link');
 	
 	// 02. Nav Var Remove Add
     $(document).on("click", ".navbar-nav a", function() {
@@ -52,9 +54,9 @@
 	// 04. Sticky Header
     $(window).on('scroll', function() {
         if ($(this).scrollTop() > 0) {
-            $('#header-top').addClass("navbar-fixed-top");
+            $('#main-nav').addClass("fixed-top");
         } else {
-            $('#header-top').removeClass("navbar-fixed-top");
+            $('#main-nav').removeClass("fixed-top");
         }
     });
 	
