@@ -92,57 +92,49 @@ $options = get_option( 'data_angel' );
 </section>
 <!-- Testimonial Area End -->		
 <?php endif; ?>
+<?php
+	$team_heading_title = $options['team_sec_heading_title'];
+	$team_heading_text = $options['team_sec_heading_text'];
+	$args = array(
+		'post_type' => 'team_member',
+		'post_status' => 'publish',
+		'posts_per_page' => '4',
+		'order' => 'ASC',
+	);
+	$query = new WP_Query( $args );
+
+	if ($query->have_posts()) :
+	
+?>
 <!-- Team Area Start -->
 <section id="team" class="team-area ptb-130">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="section-heading pb-55 text-center">
-							<h2>Lovely Team Member</h2>
-							<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds.</p>
-						</div>
-					</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="section-heading pb-55 text-center">
+					<h2><?php echo esc_attr( $team_heading_title )?></h2>
+					<p><?php echo esc_attr( $team_heading_text )?></p>
 				</div>
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="team-single">
-							<img src="img/team/1.png" alt="" />
-							<div class="team-overlay text-center">
-								<h5>Sathi Bhuiyan</h5>
-								<h6>Lovely Designer</h6>
-						    </div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="team-single">
-							<img src="img/team/2.png" alt="" />
-							<div class="team-overlay text-center">
-								<h5>Kausar Al Mamun</h5>
-								<h6>Lovely Designer</h6>
-						    </div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="team-single">
-							<img src="img/team/3.png" alt="" />
-							<div class="team-overlay text-center">
-								<h5>Nirob Khan</h5>
-								<h6>Lovely Designer</h6>
-						    </div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="team-single">
-							<img src="img/team/4.png" alt="" />
-							<div class="team-overlay text-center">
-								<h5>Salim Rana</h5>
-								<h6>Lovely Designer</h6>
-						    </div>
-						</div>
+			</div>
+		</div>
+		<div class="row">
+		<?php while ($query->have_posts()) : $query->the_post();
+			$designation = get_post_meta( get_the_ID(), 'designation', true );
+		?>
+			<div class="col-md-3 col-sm-6">
+				<div class="team-single">
+					<?php the_post_thumbnail()?>
+					<div class="team-overlay text-center">
+						<h5><?php the_title(); ?></h5>
+						<h6><?php echo $designation; ?></h6>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- Team Area End -->
+		<?php endwhile; ?>
+		</div>
+	</div>
+</section>
+<!-- Team Area End -->
+<?php endif; ?>
 <?php
 get_footer();

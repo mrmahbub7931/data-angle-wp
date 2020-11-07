@@ -26,7 +26,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<!-- header area start -->
 	<header>
 		<nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">
 			<div class="container">
@@ -57,11 +56,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<!-- <span class="navbar-toggler-icon"></span> -->
+				<button class="navbar-toggler navbarToggle" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+					<span class="navbar-toggler-icon"></span>
+					<!-- <span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> -->
 				</button>
 
 				<!-- The WordPress Menu goes here -->

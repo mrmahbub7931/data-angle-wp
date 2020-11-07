@@ -22,6 +22,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		
 		// font awesome css
 		wp_enqueue_style( 'understrap-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), $css_version );
+
+		wp_enqueue_style( 'fontawesome-style', get_template_directory_uri() . '/css/fontawesome.min.css', array(), uniqid() );
 		// icofont css
 		wp_enqueue_style( 'understrap-icofont', get_template_directory_uri() . '/css/icofont.css', array(), $css_version );
 		// meanmenu css
@@ -45,6 +47,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_script( 'understrap-modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', array(), $js_version, true );
 		// Theme js
 		wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
+
+		wp_enqueue_script( 'fontawesome-scripts', '//kit.fontawesome.com/a076d05399.js', array(), uniqid(), true );
 		// carousel js 
 		wp_enqueue_script( 'understrap-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), $js_version, true );
 		// slick js 

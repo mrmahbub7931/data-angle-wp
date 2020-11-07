@@ -10,6 +10,23 @@
 .ptb-130{
   padding: 130px 0;
 }
+.pb-55 {
+  padding-bottom: 55px;
+}
+.ptb-70{
+  padding: 70px 0;
+}
+.pb-35 {
+  padding-bottom: 35px;
+}
+.pt-70 {
+  padding-top: 70px;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 a:hover{
   text-decoration: none;
 }
@@ -292,4 +309,71 @@ a.theme-btn:hover{
 }
 .team-overlay h6 {
   color: #fff;
+}
+
+
+/**
+ * Footer css
+ */
+.bg-5{
+  background: rgba(0, 0, 0, 0) url("../img/7.png") repeat scroll center center / cover;
+}
+.conct-border.two {
+  border-bottom: 1px solid rgba(250, 87, 101, 0.2);
+}
+/* ============= 16. CONTACT INFORMATION AREA ============= */
+.single-address {
+  display: block;
+  position: relative;
+  margin-bottom:65px;
+}
+.single-address i {
+  color: #fff;
+  display: block;
+  font-size: 36px;
+  line-height: 50px;
+}
+.single-address .media-left {
+  left: 40px;
+  padding: 0;
+  position: relative;
+}
+.single-address p {
+color:#fff;
+margin:0;
+}
+
+/* ============= 17. Contact Social Area ============= */
+.contact-social ul li a {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 100%;
+  color: #000000;
+  display: block;
+  font-size: 15pt;
+  height: 45px;
+  line-height: 45px;
+  margin-right: 15px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  width: 45px;
+  margin: 0 12px;
+}
+.contact-social ul li a:hover{color:#fff;background:#ff5f6d;}
+.copyright-text p {
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.copyright-text p a {
+  color: #fff;
+  font-weight:700;
+}
+
+.contact-social.text-center{
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

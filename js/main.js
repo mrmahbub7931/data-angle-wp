@@ -41,6 +41,10 @@
     });
 
     $('.navbar-nav a').removeClass('nav-link');
+    // $('.navbarToggle').on('click',function () {
+    //     alert('clicked');
+    //     // $('#navigation').toggleClass('show');
+    // })
 	
 	// 02. Nav Var Remove Add
     $(document).on("click", ".navbar-nav a", function() {

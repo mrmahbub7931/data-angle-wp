@@ -53,6 +53,70 @@ if( class_exists( 'CSF' ) ) {
           'placeholder' => 'Select a page',
           'options'     => 'pages',
         ),
+        array(
+          'type'    => 'heading',
+          'content' => 'Team section',
+        ),
+        array(
+          'id'          => 'team_sec_heading_title',
+          'type'        => 'text',
+          'title'       => 'Team Section Heading Title',
+        ),
+        array(
+          'id'          => 'team_sec_heading_text',
+          'type'        => 'textarea',
+          'title'       => 'Team Section Heading Text',
+        ),
+        array(
+          'type'    => 'heading',
+          'content' => 'Footer section',
+        ),
+
+      )
+    ) );
+    // Create Footer section
+    CSF::createSection( $prefix, array(
+      'title'  => 'Footer Section',
+      'fields' => array(
+        array(
+          'type'    => 'heading',
+          'content' => 'Footer top section',
+        ),
+        // Select with categories
+        array(
+          'id'          => 'footer_phone',
+          'type'        => 'wp_editor',
+          'title'       => 'Enter your phone number',
+          'desc' =>  'You can use br tag if you want to display multiple phone number'
+        ),
+        array(
+          'id'          => 'footer_email',
+          'type'        => 'wp_editor',
+          'title'       => 'Enter your Email',
+          'desc' =>  'You can use br tag if you want to display multiple Email'
+        ),
+        array(
+          'id'          => 'footer_address',
+          'type'        => 'wp_editor',
+          'title'       => 'Enter your Address',
+        ),
+        array(
+          'id'        => 'footer_social',
+          'type'      => 'group',
+          'title'     => 'Social Icon',
+          'fields'    => array(
+            array(
+              'id'    => 'social_icon',
+              'type'  => 'icon',
+              'title' => 'Social Icon',
+            ),
+            array(
+              'id'    => 'social_url',
+              'type'  => 'text',
+              'title' => 'Social Url',
+            )
+          ),
+        ),
       )
     ) );
   
